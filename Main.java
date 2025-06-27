@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public abstract class GeometricObject {
+public abstract class Main {
     private String color = "white";
     private boolean filled;
     private Date dateCreated;
