@@ -14,4 +14,13 @@ public class Circle extends GeometricObject implements Comparable<Circle> {
         super(color, filled);
         this.radius = radius;
     }
-}
+
+ //Return radius 
+    public double getRadius() {
+        return radius;
+    }
+
+    // Set a new radius 
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
