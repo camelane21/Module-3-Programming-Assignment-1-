@@ -34,3 +34,14 @@ public class Circle extends GeometricObject implements Comparable<Circle> {
     public double getPerimeter() {
         return 2 * Math.PI * radius;
     }
+
+      /** Return diameter */
+    public double getDiameter() {
+        return 2 * radius;
+    }
+
+    // Compare by radius
+    @Override
+    public int compareTo(Circle o) {
+        return Double.compare(this.radius, o.radius);
+    }
