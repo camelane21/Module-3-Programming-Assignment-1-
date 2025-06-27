@@ -35,7 +35,7 @@ public class Circle extends GeometricObject implements Comparable<Circle> {
         return 2 * Math.PI * radius;
     }
 
-      /** Return diameter */
+      // Return diameter 
     public double getDiameter() {
         return 2 * radius;
     }
@@ -45,3 +45,20 @@ public class Circle extends GeometricObject implements Comparable<Circle> {
     public int compareTo(Circle o) {
         return Double.compare(this.radius, o.radius);
     }
+
+ // Two circles are equal if their radii are the same
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof Circle)) return false;
+        Circle other = (Circle) obj;
+        return Double.compare(this.radius, other.radius) == 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Circle[radius=" + radius +
+               ", color=" + getColor() +
+               ", filled=" + isFilled() + "]";
+    }
+}
